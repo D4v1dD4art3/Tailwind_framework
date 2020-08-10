@@ -1,0 +1,41 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@responsive {
+    .rotate-45 {
+        transform: rotate(45deg);
+    }
+}
+
+@variants hover {
+    .zoom {
+        transform: scale(2); 
+    }
+}
+@import '../css/.hover';
+
+h1 {
+    @apply text-3xl text-blue-700 font-semibold;    
+}
+h1:hover {
+    @apply text-white
+}
+
+.form-control{
+    @apply w-full bg-gray-200  leading-snug border-blue-200 rounded text-gray-800 py-1 px-4;
+}
+.form-control:hover{
+    @apply  bg-white;
+}
+.form-control:focus{
+    @apply shadow-outline outline-none;
+}
+.btn-primary {
+    @apply  block bg-primary px-4 py-2 rounded shadow-xl;
+}
+.btn:hover{
+    @apply shadow-none bg-gray-600;
+}
